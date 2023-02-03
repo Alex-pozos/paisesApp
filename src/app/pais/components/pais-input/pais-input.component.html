@@ -1,0 +1,14 @@
+<form class="d-flex" (ngSubmit)="buscar()" autocomplete="off">
+
+    <div class="input-group mb-3">
+        <input 
+        type="text" 
+        [(ngModel)]="termino" 
+        (input)="teclaPresionada()"
+        name="termino" 
+        class="form-control" 
+        [placeholder]="placeholder">
+        <button class="btn btn-outline-primary redondo"><i class="bi bi-search"></i></button>
+    </div>
+
+</form>

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.small-flags{
+    width: 50px;
+}
+
+.color {
+    background-color: rgb(0, 191, 255);
+}
+
+.centrar {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
