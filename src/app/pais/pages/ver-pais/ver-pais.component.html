@@ -25,14 +25,14 @@
 
 <ng-template #divPais>
 
-    <div class="card" style="max-width: 900px;">
+    <div class="card resultado" style="max-width: 900px;">
         <div class="row g-0">
             <div class="col-md-5" style="background-color: whitesmoke;">
                 <img [src]="pais.flag" class="centrar" alt="...">
             </div>
             <div class="col-md-7" style="background-color: whitesmoke;">
                 <div class="card-body">
-                    <h2 class="card-title text-center">{{pais.name}}</h2>
+                    <h2 class="card-title text-center">{{pais.translations.es}}</h2>
                     <hr>
                     <h3>Información</h3>
                     <ol class="list-group list-group">
@@ -44,22 +44,38 @@
                                         {{pais.capital}}
                                     </div>
                                     <div class="col">
-                                        <div class="fw-bold">Capital:</div>
-                                        {{pais.languages}}
+                                        <div class="fw-bold">Paises colindantes:</div>
+                                        {{pais.borders}}
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
-                                <div class="fw-bold">Población:</div>
-                                {{pais.population | number}}
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fw-bold">Población:</div>
+                                        {{pais.population | number}}
+                                    </div>
+                                    <div class="col">
+                                        <div class="fw-bold">Lada:</div>
+                                        +{{pais.callingCodes}}
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <li class="list-group-item justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
-                                <div class="fw-bold">Area de país:</div>
-                                {{pais.area | number}}
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fw-bold">Area de país:</div>
+                                        {{pais.area | number}}
+                                    </div>
+                                    <div class="col">
+                                        <div class="fw-bold">Código Alpha 2 y 3:</div>
+                                        {{pais.alpha2Code}} - {{pais.alpha3Code}}
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-start">
