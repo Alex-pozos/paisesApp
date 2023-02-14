@@ -16,6 +16,16 @@
 
     </div>
 </div>
+<div class="row">
+    
+<div class="col-5">
+    <ul class="list-group" *ngFor="let pais of paisesSugeridos">
+        <li class="list-group-item list-group-item-action">
+           <a class="nav-link" [routerLink]="['/pais', pais.alpha2Code]">{{pais.name}}</a> 
+        </li>
+    </ul>
+</div>
+</div>
 
 <hr>
 
